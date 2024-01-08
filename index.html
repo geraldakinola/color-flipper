@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Flipper</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            align-items: center;
+            justify-content: center;
+            transition: green 0.5s;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            align-self: center;
+
+        }
+    </style>
+</head>
+
+<body>
+<button onclick="changeColor()">Change Color</button>
+    <script>
+        function changeColor() {
+            const colors = ["brown", "yellow", "green", "purple", "lemon", "orange"];
+            const randomIndex = Math.floor(Math.random() *colors.length);
+            const randomColor = colors[randomIndex];
+            document.body.style.backgroundColor = randomColor
+        }
+    </script>
+</body>
+
+</html>
